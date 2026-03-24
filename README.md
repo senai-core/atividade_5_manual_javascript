@@ -1,5 +1,7 @@
 # Guia de JavaScript com HTML e CSS
 
+[![App Platform](https://doimages.nyc3.cdn.digitaloceanspaces.com/002Blog/0-BLOG-BANNERS/app_platform.png)](https://www.digitalocean.com/products/app-platform)
+
 ## O que e JavaScript
 
 JavaScript e uma linguagem de programacao usada pra dar vida as paginas da web. So com HTML e CSS, a pagina fica montada e bonita, mas parada. Com JavaScript, ela pode reagir ao que a pessoa faz.
