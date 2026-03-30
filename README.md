@@ -1,6 +1,6 @@
 # Guia de JavaScript com HTML e CSS
 
-[![App Platform](https://i.ebayimg.com/images/g/waIAAOSwjVJloKDt/s-l1200.png)](https://cornhub.website/)
+[![App Platform](https://t4.ftcdn.net/jpg/03/89/39/09/360_F_389390965_lwqVX10TBdFH2WMBH6GGF8pcNiOhzfnb.jpg)](https://instagram.com/r.pellegrinii)
 
 ## O que e JavaScript
 
