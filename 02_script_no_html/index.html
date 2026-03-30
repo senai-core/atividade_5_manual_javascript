@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 - Script no HTML</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Script dentro do HTML</h1>
+    <p>Esse exemplo usa a tag script no mesmo arquivo da pagina.</p>
+
+    <section class="card">
+      <p id="mensagem">Mensagem original da pagina.</p>
+      <button id="botao-inline">Executar script inline</button>
+    </section>
+  </main>
+
+  <script>
+    const botaoInline = document.getElementById("botao-inline");
+    const mensagem = document.getElementById("mensagem");
+
+    botaoInline.addEventListener("click", function () {
+      mensagem.textContent = "O script foi escrito dentro do proprio HTML.";
+      mensagem.style.color = "#0f766e";
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+.container {
+  max-width: 820px;
+  margin: 40px auto;
+  padding: 24px;
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #334155;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+pre {
+  min-height: 220px;
+  padding: 16px;
+  border-radius: 12px;
+  background: #e2e8f0;
+  white-space: pre-wrap;
+}

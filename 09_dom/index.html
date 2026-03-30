@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09 - DOM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1 id="titulo">Manipulacao da pagina com JavaScript</h1>
+    <p id="status">Carregando exemplo...</p>
+
+    <section class="card" id="card-principal">
+      <form id="formulario">
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text" required placeholder="Digite seu nome">
+
+        <label class="linha-checkbox">
+          <input id="aceito" type="checkbox">
+          Aceito participar do exemplo
+        </label>
+
+        <div class="acoes">
+          <button type="button" id="btn-ler">Ler valor e checkbox</button>
+          <button type="button" id="btn-texto">Trocar texto</button>
+          <button type="button" id="btn-estilo">Mudar estilo</button>
+          <button type="button" id="btn-classe">Alternar classe</button>
+          <button type="button" id="btn-lista">Criar item</button>
+          <button type="button" id="btn-remover">Remover ultimo item</button>
+        </div>
+      </form>
+
+      <p id="resultado">Resultado das acoes vai aparecer aqui.</p>
+
+      <ul id="lista">
+        <li class="item">HTML</li>
+        <li class="item">CSS</li>
+        <li class="item">JavaScript</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

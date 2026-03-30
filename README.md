@@ -1,57 +1,137 @@
-# Guia de JavaScript com HTML e CSS
+# Manual Básico de JavaScript para Páginas Web
 
-[![App Platform](https://t4.ftcdn.net/jpg/03/89/39/09/360_F_389390965_lwqVX10TBdFH2WMBH6GGF8pcNiOhzfnb.jpg)](https://instagram.com/r.pellegrinii)
+## Integrantes
 
-## O que e JavaScript
+- Guilherme De Farias Wohl
+- Rafael Pellegrini Fodi
 
-JavaScript e uma linguagem de programacao usada pra dar vida as paginas da web. So com HTML e CSS, a pagina fica montada e bonita, mas parada. Com JavaScript, ela pode reagir ao que a pessoa faz.
+## Dupla
 
-Por exemplo:
+Guilherme De Farias Wohl e Rafael Pellegrini Fodi
 
-- clicar em botao;
-- digitar num campo;
-- marcar checkbox;
-- mudar texto na tela;
-- validar formulario.
+## Objetivo do trabalho
 
-## Pra que JavaScript serve em paginas web
+Este repositório foi montado como um manual de estudo de JavaScript para web. A ideia foi explicar os conceitos com palavras simples e mostrar cada parte funcionando junto com HTML e CSS.
 
-Na pratica, JavaScript serve pra controlar comportamento e logica da pagina.
+## Estrutura do repositório
 
-Ele pode:
+- `01_introducao/`
+- `02_script_no_html/`
+- `03_script_externo/`
+- `04_variaveis_tipos_escopo/`
+- `05_operadores_e_comparacoes/`
+- `06_condicionais/`
+- `07_repeticao/`
+- `08_funcoes/`
+- `09_dom/`
 
-- fazer contas;
+Cada pasta tem um exemplo prático, com arquivos organizados em HTML, CSS e JavaScript.
+
+## Prints de funcionamento
+
+Os prints de funcionamento estão organizados dentro de `prints/`, separados por pasta da atividade:
+
+### Pasta `prints/01`
+
+- `01_tela_inicial.png`
+- `02_botao_clicado.png`
+
+### Pasta `prints/02`
+
+- `01_tela_inicial.png`
+- `02_script_inline_funcionando.png`
+
+### Pasta `prints/03`
+
+- `01_tela_inicial.png`
+- `02_script_externo_funcionando.png`
+
+### Pasta `prints/04`
+
+- `01_tela_inicial.png`
+- `02_exemplo_var.png`
+- `03_exemplo_let.png`
+- `04_exemplo_const.png`
+- `05_exemplo_escopo.png`
+
+### Pasta `prints/05`
+
+- `01_tela_inicial.png`
+- `02_operacoes_aritmeticas.png`
+- `03_comparacoes_obrigatorias.png`
+- `04_operadores_logicos.png`
+
+### Pasta `prints/06`
+
+- `01_tela_inicial.png`
+- `02_exemplo_if.png`
+- `03_exemplo_if_else.png`
+- `04_exemplo_switch.png`
+
+### Pasta `prints/07`
+
+- `01_tela_inicial.png`
+- `02_exemplo_for.png`
+- `03_exemplo_while.png`
+
+### Pasta `prints/08`
+
+- `01_tela_inicial.png`
+- `02_funcao_sem_parametro.png`
+- `03_funcao_com_parametro.png`
+- `04_funcao_com_retorno.png`
+
+### Pasta `prints/09`
+
+- `01_tela_inicial.png`
+- `02_ler_valor_e_checked.png`
+- `03_textContent.png`
+- `04_style.png`
+- `05_classList_e_querySelectorAll.png`
+- `06_createElement_e_appendChild.png`
+- `07_remove.png`
+
+Esses nomes deixam a identificação mais clara na hora da correção.
+
+## O que é JavaScript
+
+JavaScript é uma linguagem de programação usada para fazer a página reagir. Só com HTML e CSS, a página fica montada e com visual. Com JavaScript, dá para clicar em botão, validar campo, trocar texto, esconder coisa, mostrar mensagem e mexer nos elementos da tela.
+
+## Para que JavaScript serve em páginas web
+
+Na prática, ele serve para cuidar do comportamento da página.
+
+Exemplos simples:
+
+- ler o que a pessoa digitou;
+- verificar se um checkbox foi marcado;
 - comparar valores;
-- tomar decisoes;
-- repetir acoes;
-- alterar elementos do HTML;
-- responder a eventos.
-
-Entao, quando uma pagina muda sem precisar recarregar tudo, quase sempre tem JavaScript no meio.
+- fazer contas;
+- tomar decisões com `if`;
+- repetir ações com `for` e `while`;
+- mudar texto, cor, classe e estilo dos elementos.
 
 ## Como JavaScript se relaciona com HTML e CSS
 
-Os tres trabalham juntos:
+Os três trabalham juntos:
 
 - HTML monta a estrutura;
-- CSS cuida da aparencia;
-- JavaScript cuida das acoes.
+- CSS cuida do visual;
+- JavaScript cuida da lógica e da interação.
 
-Se eu quiser criar um botao que muda a cor de um texto, por exemplo:
+Exemplo do dia a dia:
 
-- o HTML cria o botao e o texto;
-- o CSS define o visual;
-- o JavaScript faz a troca acontecer quando clicar.
+- o HTML cria um botão e um parágrafo;
+- o CSS deixa esse botão bonito;
+- o JavaScript faz o clique trocar o texto ou a cor.
 
 ## Onde JavaScript pode ser usado no HTML
 
-O JavaScript pode aparecer no HTML de duas formas mais comuns:
+Existem duas formas bem comuns:
 
-### 1. Dentro da propria pagina
+### 1. Script dentro do próprio HTML
 
-Usando a tag `<script>`.
-
-Exemplo:
+Usando a tag `<script>` no mesmo arquivo.
 
 ```html
 <script>
@@ -59,29 +139,73 @@ Exemplo:
 </script>
 ```
 
-### 2. Em arquivo separado
+### 2. Script em arquivo separado
 
-Ligando um arquivo `.js` no HTML.
-
-Exemplo:
+Ligando um arquivo `.js` no final do HTML ou no `head` com cuidado.
 
 ```html
 <script src="script.js"></script>
 ```
 
-## Diferenca entre script no HTML e script em arquivo separado
+## Diferença entre script no HTML e script em arquivo separado
 
-### Script dentro do HTML
+### Script no HTML
 
-E bom pra teste rapido ou exemplo pequeno. O problema e que mistura muita coisa no mesmo arquivo.
+É bom para exemplo pequeno e teste rápido. O lado ruim é que mistura estrutura e lógica no mesmo arquivo.
 
 ### Script em arquivo separado
 
-Fica mais organizado e mais facil de manter. Em projeto de verdade, isso costuma ser melhor.
+Fica mais organizado, mais fácil de ler e melhor para manter. Em projeto normal, essa costuma ser a melhor opção.
 
-## Variaveis
+## Exemplos da parte inicial
 
-Variavel e um lugar pra guardar um valor.
+### `01_introducao`
+
+O que é:
+Uma página simples mostrando a função do JavaScript junto com HTML e CSS.
+
+Para que serve:
+Para apresentar a ideia geral da linguagem.
+
+Como eu usei no exemplo:
+Criei um botão que troca o texto de uma caixa e mostra que o JavaScript é a parte que faz a página reagir.
+
+Onde está:
+`01_introducao/index.html`
+
+### `02_script_no_html`
+
+O que é:
+Exemplo com JavaScript escrito dentro da própria página.
+
+Para que serve:
+Para mostrar como usar a tag `<script>` direto no HTML.
+
+Como eu usei no exemplo:
+O botão chama um código inline que muda um texto na tela.
+
+Onde está:
+`02_script_no_html/index.html`
+
+### `03_script_externo`
+
+O que é:
+Exemplo com JavaScript em arquivo separado.
+
+Para que serve:
+Para mostrar a forma mais organizada de ligar o script na página.
+
+Como eu usei no exemplo:
+O HTML puxa um `script.js`, e esse arquivo responde ao clique do botão.
+
+Onde está:
+`03_script_externo/index.html`
+
+## Variáveis, tipos e escopo
+
+### O que é uma variável
+
+Variável é um espacinho na memória para guardar um valor.
 
 Exemplos:
 
@@ -91,25 +215,25 @@ let idade = 18;
 const aprovado = true;
 ```
 
-Os valores podem ser texto, numero, verdadeiro ou falso, e por ai vai.
+### Como declarar variável em JavaScript
 
-## Como declarar variaveis
-
-Em JavaScript, as formas principais sao:
+As formas principais são:
 
 - `var`
 - `let`
 - `const`
 
-### var
+### Diferença entre `var`, `let` e `const`
 
-Forma mais antiga. Ainda funciona, mas hoje em dia costuma ser evitada porque pode gerar confusao com escopo.
+#### `var`
+
+É a forma mais antiga. Hoje em dia costuma ser evitada porque pode causar confusão com escopo.
 
 ```js
 var cidade = "Porto Alegre";
 ```
 
-### let
+#### `let`
 
 Usa quando o valor pode mudar.
 
@@ -118,47 +242,31 @@ let pontos = 10;
 pontos = 20;
 ```
 
-### const
+#### `const`
 
-Usa quando a variavel nao deve receber outro valor depois.
+Usa quando a variável não deve receber outro valor depois.
 
 ```js
-const pi = 3.14;
+const curso = "JavaScript";
 ```
 
-## Diferenca entre var, let e const
+### Quando cada uma pode ser usada
 
-Resumo direto:
+- `const`: quando o valor vai ficar fixo;
+- `let`: quando o valor vai mudar;
+- `var`: mais para entender código antigo ou demonstrar diferença de escopo.
 
-- `var` e antiga e nao e tao segura;
-- `let` pode mudar;
-- `const` nao deve ser reatribuida.
+### O que é escopo global
 
-Hoje, o mais comum e usar:
-
-- `const` por padrao;
-- `let` quando precisar mudar o valor;
-- `var` mais pra entender codigo antigo.
-
-## Escopo de variavel
-
-Escopo e o lugar onde a variavel existe e pode ser usada.
-
-### Escopo global
-
-Quando a variavel foi criada fora de blocos e funcoes, ela pode ser acessada em varias partes do codigo.
+Quando a variável é criada fora de função e fora de bloco. Ela pode ser usada em várias partes do código.
 
 ```js
 let turma = "3 ano";
-
-function mostrarTurma() {
-  console.log(turma);
-}
 ```
 
-### Escopo de funcao
+### O que é escopo de função
 
-Se a variavel foi criada dentro de uma funcao, ela so existe ali.
+Quando a variável nasce dentro de uma função. Fora dela, ela não existe.
 
 ```js
 function exemplo() {
@@ -167,11 +275,9 @@ function exemplo() {
 }
 ```
 
-### Escopo de bloco
+### O que é escopo de bloco
 
-Bloco e o que fica dentro de chaves, tipo em `if`, `for` e `while`.
-
-`let` e `const` respeitam isso.
+Bloco é o que fica entre chaves, como em `if`, `for` e `while`. `let` e `const` respeitam esse limite.
 
 ```js
 if (true) {
@@ -180,9 +286,26 @@ if (true) {
 }
 ```
 
-## Exemplo com variavel acessivel fora do bloco
+### Exemplo com `var`
 
-Com `var`, isso pode acontecer:
+```js
+var serie = "3 ano";
+```
+
+### Exemplo com `let`
+
+```js
+let faltas = 2;
+faltas = 3;
+```
+
+### Exemplo com `const`
+
+```js
+const escola = "SENAI";
+```
+
+### Variável acessível fora de um bloco
 
 ```js
 if (true) {
@@ -192,40 +315,42 @@ if (true) {
 console.log(teste);
 ```
 
-## Exemplo com variavel que nao pode ser acessada fora do bloco
-
-Com `let`, nao funciona fora:
+### Variável que não pode ser acessada fora do bloco
 
 ```js
 if (true) {
-  let teste = "so dentro do bloco";
+  let teste = "só dentro";
 }
 
 // console.log(teste);
-// Da erro porque essa variavel so existe dentro do bloco
+// Dá erro porque a variável só existe dentro do bloco
 ```
 
-## Operadores aritmeticos
+### Exemplo prático
 
-Os principais sao:
+O que é:
+Uma página que mostra `var`, `let`, `const`, escopo global, de função e de bloco.
+
+Para que serve:
+Para visualizar a diferença de comportamento entre as declarações.
+
+Como eu usei no exemplo:
+Criei botões que escrevem o resultado na tela e um trecho comentado mostra o erro fora do bloco.
+
+Onde está:
+`04_variaveis_tipos_escopo/index.html`
+
+## Operadores, comparações e lógica
+
+### Operadores aritméticos principais
 
 - `+` soma
-- `-` subtracao
-- `*` multiplicacao
-- `/` divisao
-- `%` resto da divisao
+- `-` subtração
+- `*` multiplicação
+- `/` divisão
+- `%` resto da divisão
 
-Exemplo:
-
-```js
-let resultado = 10 + 5;
-```
-
-## Operadores relacionais
-
-Servem pra comparar valores.
-
-Os mais usados:
+### Operadores relacionais principais
 
 - `>`
 - `<`
@@ -236,89 +361,84 @@ Os mais usados:
 - `!=`
 - `!==`
 
-## Operadores logicos
+### Operadores lógicos principais
 
-Servem pra juntar condicoes.
+- `&&` significa "e"
+- `||` significa "ou"
+- `!` significa "não"
 
-- `&&` quer dizer "e"
-- `||` quer dizer "ou"
-- `!` quer dizer "nao"
+### Diferença entre `==` e `===`
 
-Exemplo:
-
-```js
-let idade = 18;
-let temDocumento = true;
-
-if (idade >= 18 && temDocumento) {
-  console.log("Pode entrar");
-}
-```
-
-## Diferenca entre == e ===
-
-Essa parte e importante.
-
-### `==`
-
-Compara o valor, mas pode converter tipo sozinho.
+`==` compara o valor, mas aceita conversão de tipo.
 
 ```js
-console.log(5 == "5"); // true
+5 == "5"; // true
 ```
 
-### `===`
-
-Compara valor e tipo ao mesmo tempo.
+`===` compara valor e tipo ao mesmo tempo.
 
 ```js
-console.log(5 === "5"); // false
+5 === "5"; // false
 ```
 
-Outro exemplo:
+### Diferença entre `!=` e `!==`
+
+`!=` compara com conversão de tipo.
 
 ```js
-console.log(0 == false); // true
-console.log(0 === false); // false
+5 != "5"; // false
 ```
 
-## Por que `===` e mais seguro
-
-Porque ele evita comparacao enganosa.
-
-Quando usa `==`, o JavaScript tenta ajeitar os tipos sozinho. As vezes isso parece ajudar, mas tambem pode causar bug sem tu perceber. Com `===`, o resultado fica mais claro e mais confiavel.
-
-## Diferenca entre != e !==
-
-Mesma ideia da comparacao anterior.
+`!==` compara valor e tipo.
 
 ```js
-console.log(5 != "5"); // false
-console.log(5 !== "5"); // true
+5 !== "5"; // true
 ```
 
-- `!=` compara com conversao de tipo;
-- `!==` compara valor e tipo.
+### Por que `===` é mais seguro em muitos casos
+
+Porque ele evita comparação enganosa. Com `==`, o JavaScript tenta converter os valores sozinho. Isso pode parecer prático, mas também pode esconder erro. Com `===`, o resultado fica mais confiável porque ele exige mesmo valor e mesmo tipo.
+
+### Comparações obrigatórias
+
+```js
+5 == "5";   // true
+5 === "5";  // false
+5 != "5";   // false
+5 !== "5";  // true
+0 == false; // true
+0 === false; // false
+```
+
+### Exemplo prático
+
+O que é:
+Página com contas e comparações.
+
+Para que serve:
+Para mostrar operadores aritméticos, relacionais e lógicos em um resultado visível.
+
+Como eu usei no exemplo:
+Botões executam as comparações obrigatórias e explicam por que `===` é mais seguro.
+
+Onde está:
+`05_operadores_e_comparacoes/index.html`
 
 ## Estruturas condicionais
 
-Servem pra fazer o codigo tomar decisao.
+Condicionais servem para fazer o código escolher um caminho.
 
-### if
+### `if`
 
 ```js
-let idade = 18;
-
 if (idade >= 18) {
   console.log("Maior de idade");
 }
 ```
 
-### if...else
+### `if...else`
 
 ```js
-let nota = 6;
-
 if (nota >= 7) {
   console.log("Aprovado");
 } else {
@@ -326,28 +446,37 @@ if (nota >= 7) {
 }
 ```
 
-### switch
+### `switch`
 
 ```js
-let dia = 2;
-
 switch (dia) {
   case 1:
     console.log("Domingo");
-    break;
-  case 2:
-    console.log("Segunda");
     break;
   default:
     console.log("Outro dia");
 }
 ```
 
-## Estruturas de repeticao
+### Exemplo prático
 
-Servem pra repetir codigo.
+O que é:
+Página com três testes de decisão.
 
-### for
+Para que serve:
+Para ver a diferença entre `if`, `if...else` e `switch`.
+
+Como eu usei no exemplo:
+Cada botão roda uma estrutura diferente e mostra a resposta na tela.
+
+Onde está:
+`06_condicionais/index.html`
+
+## Estruturas de repetição
+
+Repetição serve para executar uma ação várias vezes.
+
+### `for`
 
 ```js
 for (let i = 1; i <= 5; i++) {
@@ -355,7 +484,7 @@ for (let i = 1; i <= 5; i++) {
 }
 ```
 
-### while
+### `while`
 
 ```js
 let i = 1;
@@ -366,176 +495,275 @@ while (i <= 5) {
 }
 ```
 
-## Funcoes
+### Exemplo prático
 
-Funcao e um bloco de codigo feito pra executar uma tarefa.
+O que é:
+Página com um exemplo de `for` e um de `while`.
 
-### Como declarar uma funcao
+Para que serve:
+Para mostrar repetição de forma visual.
+
+Como eu usei no exemplo:
+Os botões montam uma lista de números usando cada estrutura.
+
+Onde está:
+`07_repeticao/index.html`
+
+## Funções
+
+Função é um bloco de código criado para executar uma tarefa.
+
+### Como declarar uma função
 
 ```js
 function mostrarMensagem() {
-  console.log("Ola");
+  console.log("Olá");
 }
 ```
 
-### Como chamar uma funcao
+### Como chamar uma função
 
 ```js
 mostrarMensagem();
 ```
 
-### Funcao com parametro
+### Função com parâmetro
 
 ```js
 function saudar(nome) {
-  console.log("Ola, " + nome);
+  console.log("Olá, " + nome);
 }
-
-saudar("Guilherme");
 ```
 
-### Funcao com retorno
+### Função com retorno
 
 ```js
 function somar(a, b) {
   return a + b;
 }
-
-console.log(somar(2, 3));
 ```
 
-## Como JavaScript interage com a pagina
+### Exemplos obrigatórios
 
-Essa parte e o DOM, que e basicamente a forma de o JavaScript acessar e mudar o que esta no HTML.
+- função sem parâmetro;
+- função com parâmetro;
+- função que retorna valor.
+
+### Exemplo prático
+
+O que é:
+Página com três exemplos de função.
+
+Para que serve:
+Para mostrar declaração, chamada, parâmetro e retorno.
+
+Como eu usei no exemplo:
+Uma função mostra mensagem, outra recebe nome e outra soma dois números e devolve o resultado.
+
+Onde está:
+`08_funcoes/index.html`
+
+## Manipulação de página com JavaScript
+
+Aqui entra o DOM, que é a forma do JavaScript acessar e mudar os elementos da página.
 
 ### `document`
 
-Representa a pagina.
+Para que serve:
+Representa a página inteira.
 
-```js
-console.log(document);
-```
+Como usei:
+Usei o `document` como ponto de partida para selecionar e criar elementos.
+
+Pasta:
+`09_dom/`
 
 ### `getElementById()`
 
+Para que serve:
 Pega um elemento pelo `id`.
 
-```js
-const titulo = document.getElementById("titulo");
-```
+Como usei:
+Usei para acessar input, checkbox, título e lista.
+
+Pasta:
+`09_dom/`
 
 ### `querySelector()`
 
-Pega o primeiro elemento que combinar com o seletor.
+Para que serve:
+Pega o primeiro elemento que combina com um seletor CSS.
 
-```js
-const caixa = document.querySelector(".caixa");
-```
+Como usei:
+Usei para selecionar um card da página e trocar classe.
+
+Pasta:
+`09_dom/`
 
 ### `.value`
 
-Le o valor digitado em um campo.
+Para que serve:
+Ler o que foi digitado em campo de formulário.
 
-```js
-const nome = document.getElementById("nome").value;
-```
+Como usei:
+Li o nome digitado pelo usuário e mostrei no resultado.
+
+Pasta:
+`09_dom/`
 
 ### `.checked`
 
-Verifica se um checkbox esta marcado.
+Para que serve:
+Ver se um checkbox está marcado.
 
-```js
-const marcado = document.getElementById("aceito").checked;
-```
+Como usei:
+Mostrei na tela se a pessoa marcou ou não a opção.
+
+Pasta:
+`09_dom/`
 
 ### `.textContent`
 
+Para que serve:
 Ler ou trocar o texto de um elemento.
 
-```js
-titulo.textContent = "Novo titulo";
-```
+Como usei:
+Troquei o texto do título e do parágrafo de resposta.
+
+Pasta:
+`09_dom/`
 
 ### `.style`
 
-Muda estilo direto pelo JavaScript.
+Para que serve:
+Alterar estilo direto com JavaScript.
 
-```js
-titulo.style.color = "red";
-```
+Como usei:
+Mudei a cor do título por clique.
+
+Pasta:
+`09_dom/`
 
 ### `classList`
 
-Adiciona, remove ou alterna classe CSS.
+Para que serve:
+Adicionar, remover ou alternar classe CSS.
 
-```js
-titulo.classList.add("destaque");
-```
+Como usei:
+Ativei e removi uma classe de destaque no card.
+
+Pasta:
+`09_dom/`
 
 ### `addEventListener()`
 
-Faz um elemento responder a evento.
+Para que serve:
+Fazer um elemento responder a um evento.
 
-```js
-botao.addEventListener("click", function () {
-  console.log("Clicou");
-});
-```
+Como usei:
+Todos os botões da página usam `click` com `addEventListener()`.
 
-## Itens recomendados
+Pasta:
+`09_dom/`
 
-### `querySelectorAll()`
+### Itens recomendados
 
-Pega varios elementos de uma vez.
+#### `querySelectorAll()`
 
-```js
-const itens = document.querySelectorAll(".item");
-```
+Para que serve:
+Selecionar vários elementos.
 
-### `checkValidity()`
+Como usei:
+Marquei vários itens da lista com uma classe.
 
-Verifica se um formulario esta valido.
+Pasta:
+`09_dom/`
 
-```js
-formulario.checkValidity();
-```
+#### `checkValidity()`
 
-### `DOMContentLoaded`
+Para que serve:
+Ver se um formulário está válido.
 
-Espera o HTML carregar antes de rodar o script.
+Como usei:
+Chequei se o nome foi preenchido antes de mostrar a mensagem.
 
-```js
-document.addEventListener("DOMContentLoaded", function () {
-  console.log("Pagina carregada");
-});
-```
+Pasta:
+`09_dom/`
 
-## Diferencial
+#### `DOMContentLoaded`
 
-### `createElement()`
+Para que serve:
+Esperar o HTML carregar antes de rodar o script.
 
-Cria elemento novo.
+Como usei:
+Esperei a página carregar para preencher uma mensagem inicial.
 
-```js
-const li = document.createElement("li");
-```
+Pasta:
+`09_dom/`
 
-### `appendChild()`
+### Diferencial
 
-Coloca esse elemento dentro de outro.
+#### `createElement()`
 
-```js
-lista.appendChild(li);
-```
+Para que serve:
+Criar um elemento novo.
 
-### `remove()`
+Como usei:
+Criei um item de lista novo.
 
-Remove um elemento.
+Pasta:
+`09_dom/`
 
-```js
-li.remove();
-```
+#### `appendChild()`
 
-## Fechando
+Para que serve:
+Colocar um elemento dentro de outro.
 
-JavaScript e a parte que faz a pagina reagir. Ele trabalha junto com HTML e CSS, ajuda a criar interatividade e tambem ensina muita logica de programacao. Entender bem variaveis, comparacoes, funcoes, repeticao e manipulacao da pagina ja da uma base bem boa pra seguir estudando.
+Como usei:
+Adicionei o item criado dentro da lista.
+
+Pasta:
+`09_dom/`
+
+#### `remove()`
+
+Para que serve:
+Remover um elemento.
+
+Como usei:
+Apaguei o último item criado da lista.
+
+Pasta:
+`09_dom/`
+
+### Exemplo prático principal do DOM
+
+O que é:
+Uma página com formulário, checkbox, botões e lista.
+
+Para que serve:
+Para mostrar como o JavaScript interage com elementos reais da página.
+
+Como eu usei no exemplo:
+Li valor digitado, verifiquei checkbox, troquei texto, alterei cor, adicionei classe, escutei clique, selecionei vários elementos, validei formulário, criei item novo e removi item.
+
+Onde está:
+`09_dom/index.html`
+
+## Referências
+
+- MDN Web Docs. JavaScript Guide. Disponível em: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+- MDN Web Docs. Introduction to HTML. Disponível em: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content
+- MDN Web Docs. CSS first steps. Disponível em: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics
+- MDN Web Docs. Document Object Model. Disponível em: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+- W3Schools. JavaScript Tutorial. Disponível em: https://www.w3schools.com/js/
+
+## Fechamento
+
+Com esse manual, deu para ver que o JavaScript é a parte que faz a página reagir. Ele completa o HTML e o CSS, ajuda a criar interação e também treina bastante lógica. Os exemplos ficaram separados por assunto para facilitar a correção e o estudo.
+
+## Observação final
+
+Foi feito o uso de IA apenas para a estilização e padronização frontend das telas, para uma visualização mais agradável. (e acentuação no texto kkkk)
+
+Ass: Guilherme e Rafa :)
